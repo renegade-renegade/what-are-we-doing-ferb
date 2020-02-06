@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Wheel of Fortune Bingo</title>
+    <title>Renegade date</title>
     <style type="text/css">
     text{
         font-family:Helvetica, Arial, sans-serif;
@@ -58,7 +58,7 @@
                     {"label":"Catch 22",  "value":1,  "question":"Picnic + sharing favorite catch 22 passages!"},
                     {"label":"Spooky",  "value":1,  "question":"Horror movie + midnight walk in the graveyard. Who's the oldest grave?"},
                     {"label":"Hamilton",  "value":1,  "question":"Hamilton sing along, location tour, and delving into the lyric book"},
-                    {"label":"Crime spree",  "value":1,  "question":"Embrace the chaos. How many misdemeanors can we rack up?"},
+                    {"label":"Crime spree",  "value":1,  "question":"Embrace the chaos. How many misdemeanors can we rack up? (4 Loko chug beforehand?) [is fellatio still a crime in NJ?]"},
                     {"label":"Camp out",  "value":1,  "question":"(small) fire and looking at stars on golf course (good thing someone has 2 sleeping bags on campus)"},
                     {"label":"What-what-what-what?",  "value":1,  "question":"Choose outfit for the other person at thrift store. Followed by dinner wearing the outfits."},
                     {"label":"Spy kids",  "value":1,  "question":"Spy kids marathon. Reverse order. Speed up on criteria we decide upon."},
@@ -70,6 +70,7 @@
                     {"label":"Tik Tok",  "value":1,  "question":"Lets make some fucking tik toks."},
                     {"label":"Animal Planet",  "value":1,  "question":"How many different animals can we find and film?"},
                     {"label":"Sailing picnic",  "value":1,  "question":"I mean... this is pretty self explanatory."},
+                    {"label":"Bad luck",  "value":1,  "question":"You explain cats lore or a universe of your choice. I explain the background to 40k."},
                     
         ];
         var svg = d3.select('#chart')
@@ -104,6 +105,7 @@
                 return "rotate(" + (d.angle * 180 / Math.PI - 90) + ")translate(" + (d.outerRadius -10) +")";
             })
             .attr("text-anchor", "end")
+            .attr("color", "white")
             .text( function(d, i) {
                 return data[i].label;
             });
